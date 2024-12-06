@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+/* Top Bar */
+header.top-bar {
+    background-color: #333; /* Dark grey background */
+    padding: 1px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    align-items: center;
+    color: white; /* Ensures text is visible on dark background */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between elements */
+}
+
+.logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none; /* Removes default border */
+    border-radius: 5px;
+    width: 400px;
+    color: #333; /* Text color for contrast */
+    background-color: #fff; /* White background for search input */
+}
+
+.search-bar::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+.search-bar:focus {
+    border: 2px solid #1e90ff; /* Highlight border color (e.g., blue) */
+    outline: none; /* Removes default browser outline */
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5); /* Adds a glowing effect */
+    background-color: #f0f8ff; /* Optional: Light background color */
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+.search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #00bfff; /* Light blue background */
+    color: white; /* White text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.search-button:hover {
+    background-color: #1e90ff; /* Slightly darker blue on hover */
+}
+
+
+/* Style for the dropdown container */
+.dropdown-container {
+    position: absolute;
+    top: 110px; /* Adjust to align with the search bar */
+    left: 45px; /* Align with the search bar */
+    background-color: white; /* White background */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border: 1.5px solid #1e90ff; /* 5px wide border with black color */
+    border-radius: 9px;     /* Optional: Adds rounded corners */
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+    background-color: #f0f0f0; /* Light gray */
+    border: 1px solid #333;  /* Dark grey border */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    width: 371px; /* Adjust width as needed */
+    position: relative; /* To position the arrow */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/* Add Arrow to the Right Side */
+.dropdown-toggle::after {
+    content: "▼"; /* Unicode character for down arrow */
+    font-size: 12px; /* Smaller size for the arrow */
+    color: #333; /* Same dark grey as the border */
+    position: absolute;
+    right: 15px; /* Distance from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px;
+    width: 371px; /* Same as toggle button */
+    z-index: 1000;
+    flex-direction: column; /* Stack items vertically */
+    max-height: 300px; /* Set maximum height for dropdown */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+}
+
+/* Show Dropdown Menu on Button Click */
+.dropdown.open .dropdown-menu {
+    display: flex; /* Ensure the dropdown becomes visible */
+}
+
+/* Checkbox Container */
+.dropdown-menu div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox and label */
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover Effect for List Items */
+.dropdown-menu div:hover {
+    background-color: #fffacd; /* Light yellow */
+    color: #333; /* Dark text for contrast */
+    border-radius: 3px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance visibility */
+}
+
+/* Ensure Labels Align Properly */
+.dropdown-menu label {
+    flex: 1; /* Labels take up remaining space */
+    font-size: 14px;
+    color: #333; /* Adjust label color */
+}
+/* Pointer for Hover */
+.dropdown-menu input[type="checkbox"] {
+    cursor: pointer; /* Pointer cursor for checkboxes */
+}
+
+/* Filter Button */
+.apply-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%; /* Button fills width of dropdown */
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Ensure Dropdown Width Consistency */
+.dropdown-menu {
+    width: 200px; /* Same width as toggle button */
+}
+
+/* Add Hover Effect for Dropdown Toggle */
+.dropdown-toggle:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 2%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    padding: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    font-size: 12px;
+}
+/* Table Styles */
+table {
+    width: 100%; /* Reduce table width to avoid touching edges */
+    max-width: 1000px; /* Set a maximum width */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.table-wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 35px auto; /* Add spacing */
+}
+
+table thead {
+    background-color: #333;
+    color: white;
+}
+
+table th, table td {
+    border: 4px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.dropdown-container {
+    margin-bottom: 20px; /* Space between dropdowns and table */
+}
+
+/*Space Between Table and Dark Grey Corners*/
+.content {
+    padding: 20px;
+    margin: 2px auto;
+    min-height: 60vh; /* Make it at least the height of the viewport */
+    box-sizing: border-box; /* Include padding in the height calculation */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    margin-top: 9px; /*distance */
+}

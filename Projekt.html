@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management von IV Projekten</title>
+    <link rel="stylesheet" href="Projekt.css">
+    <script src="Projekt.js" defer></script>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo-container">
+            <img src="blueant_logo.png" alt="BlueAnt Logo" class="logo">
+             <!-- Search Bar Section -->
+            <input type="text" class="search-bar" placeholder="Projektname hier einfügen...">
+            <button class="search-button">Suche</button>
+        </div>
+    </header>
+   
+    <main>
+        <!-- Filters Section -->
+            <section class="filters-section">
+                <!-- Status Dropdown -->
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle">Status</button>
+                    <div class="dropdown-menu">
+                        <div>
+                            <input type="checkbox" id="status1" value="A1 - Anfrage/Idee">
+                            <label for="status1">A1 - Anfrage/Idee</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status2" value="A2 - Bewertung">
+                            <label for="status2">A2 - Bewertung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status3" value="B1 - Initiierung">
+                            <label for="status3">B1 - Initiierung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status4" value="B2 - Auftragsklärung">
+                            <label for="status4">B2 - Auftragsklärung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status5" value="B3 - Planung">
+                            <label for="status5">B3 - Planung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status6" value="Empfohlen">
+                            <label for="status6">B4 - Empfohlen</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status7" value="Genehmigt">
+                            <label for="status7">B5 - Genehmigt</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status8" value="Umsetzung">
+                            <label for="status8">C1 - Umsetzung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status9" value="Abnahme">
+                            <label for="status9">C1 - Abnahme</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status10" value="Abschluss">
+                            <label for="status10">E1 - Abschluss</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status11" value="Revision">
+                            <label for="status11">F1 - Revision</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status12" value="Gestoppt">
+                            <label for="status12">Z1 - Gestoppt/Zurückgestellt</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status13" value="Abgeschlossen">
+                            <label for="status13">Z2 - Abgeschlossen</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status14" value="Abgelehnt">
+                            <label for="status14">Z3 - Abgelehnt</label>
+                        </div>
+                        <button type="button" class="apply-button">Filter anwenden</button>
+                    </div>
+                </div>
+                <!-- Projektart Dropdown -->
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle">Projektart</button>
+                    <div class="dropdown-menu">
+                        <div>
+                            <input type="checkbox" id="status1" value="strategie">
+                            <label for="status1">A - Strategie</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status2" value="implementierung">
+                            <label for="status2">B - IT - Implementierung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status3" value="Regulatorik">
+                            <label for="status3">C - Regulatorik</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status4" value="Linie">
+                            <label for="status4">D3 - Linie</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status5" value="Produkteinführung">
+                            <label for="status5">D - Produkteinführung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status6" value="Vorstandsprojekte">
+                            <label for="status6">D - Vorstandsprojekte</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status7" value="Programm">
+                            <label for="status7">P - Programm</label>
+                        </div>
+                    <button type="button" class="apply-button">Filter anwenden</button>
+                    </div>
+                </div>
+                <!-- Unternehmensbereich Dropdown -->
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle">Unternehmensbereich</button>
+                    <div class="dropdown-menu">
+                        <div>
+                            <input type="checkbox" id="status1" value="Unternehmen">
+                            <label for="status1">Unser Unternehmen</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status2" value="CEO">
+                            <label for="status2">&nbsp;&nbsp;CEO</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status3" value="Personal">
+                            <label for="status3">&nbsp;&nbsp;&nbsp;&nbsp;Personal</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status4" value="Finanzen">
+                            <label for="status4">&nbsp;&nbsp;&nbsp;&nbsp;Finanzen/Steuerung/Control</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status5" value="IT">
+                            <label for="status5">&nbsp;&nbsp;&nbsp;&nbsp;IT-Services</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status6" value="Org/IT">
+                            <label for="status6">&nbsp;&nbsp;&nbsp;&nbsp;Org/IT</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status7" value="Beschaffung">
+                            <label for="status7">&nbsp;&nbsp;&nbsp;&nbsp;Beschaffung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status8" value="Förderung">
+                            <label for="status8">&nbsp;&nbsp;&nbsp;&nbsp;Förderung</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status9" value="CIO">
+                            <label for="status9">&nbsp;&nbsp;CIO</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status10" value="Backendsysteme">
+                            <label for="status10">&nbsp;&nbsp;&nbsp;&nbsp;Backendsysteme</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status11" value="Frontendsysteme">
+                            <label for="status11">&nbsp;&nbsp;&nbsp;&nbsp;Frontendsysteme</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="status12" value="Qualitätsmanagement">
+                            <label for="status12">&nbsp;&nbsp;&nbsp;&nbsp;Qualitätsmanagement</label>
+                        </div>
+                        <button type="button" class="apply-button">Filter anwenden</button>
+                    </div>
+                </div>        
+            </div>        
+        </section>
+        <!-- Table Section -->
+        <section class="content">
+             <!-- Add spacing around the table -->
+             <div class="table-wrapper">
+             <table id="project-table">
+               <thead>
+                   <tr>
+                     <th>Projektname</th>
+                     <th>Projektstart</th>
+                     <th>Projektende</th>
+                     <th>Projektstatus</th>
+                     <th>Projektleiter</th>
+                     <th>Gegenstand</th>
+                   </tr>
+               </thead>
+            <tbody>
+                <!-- Data from API will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+        </section>
+        </main>
+
+    
+    <footer>
+        <p>&copy; 2024 Projektgruppe_7</p>
+    </footer>
+</body>
+</html>
